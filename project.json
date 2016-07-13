@@ -1,0 +1,27 @@
+{
+  "title": "hinter",
+  "version": "1.0.0-*",
+  "authors": [
+    "Fabio Junqueira"
+  ],
+  "description": "Adds hinting capabilities to console applications",
+  "packOptions": {
+    "projectUrl": "http://www.github.com/fjunqueira/hinter",
+    "tags": [
+      "console",
+      "hinting",
+      "hint",
+      "autocomplete",
+      "completion"
+    ],
+    "licenseUrl": "http://www.wtfpl.net/"
+  },
+  "dependencies": {
+    "NETStandard.Library": "1.6.0"
+  },
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}

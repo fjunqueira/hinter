@@ -1,6 +1,6 @@
 {
   "title": "hinter",
-  "version": "1.0.0-*",
+  "version": "1.0.2-*",
   "authors": [
     "Fabio Junqueira"
   ],
@@ -14,7 +14,7 @@
       "autocomplete",
       "completion"
     ],
-    "licenseUrl": "http://www.wtfpl.net/"
+    "licenseUrl": "https://opensource.org/licenses/MIT"
   },
   "dependencies": {
     "NETStandard.Library": "1.6.0"
@@ -22,6 +22,7 @@
   "frameworks": {
     "netstandard1.6": {
       "imports": "dnxcore50"
-    }
+    },
+    "net451": {}
   }
 }

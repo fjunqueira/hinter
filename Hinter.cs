@@ -16,8 +16,11 @@ namespace HinterLib
 
             while (ConsoleKey.Enter != (input = Console.ReadKey()).Key)
             {
-                if (input.Key == ConsoleKey.Backspace && userInput.Any())
-                    userInput = userInput.Remove(userInput.Length - 1, 1);
+                if (input.Key == ConsoleKey.Backspace)
+                    userInput = userInput.Any() ? userInput.Remove(userInput.Length - 1, 1) : string.Empty;
+
+                else if (input.Key == ConsoleKey.Tab)
+                    userInput = suggestion;
 
                 else if (input != null && Regex.IsMatch(input.KeyChar.ToString(), inputRegex))
                     userInput += input.KeyChar;

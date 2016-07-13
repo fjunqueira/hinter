@@ -25,7 +25,7 @@ namespace ConsoleApplication
                 "Peru"
             };
 
-            Console.WriteLine("Availiable countries:");
+            Console.WriteLine("Available countries:");
             Console.WriteLine();
 
             foreach (var country in countries)

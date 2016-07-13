@@ -1,6 +1,10 @@
 # hinter
 A (very) simple lib to add hinting capabilities to C# console applications
 
+I had to add this feature to a project I was working on, and thought it might be useful to someone else.
+
+You can find it on [nuget](https://www.nuget.org/packages/hinter/)
+
 Example program:
 
 ```c#

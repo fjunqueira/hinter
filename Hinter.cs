@@ -13,6 +13,7 @@ namespace HinterLib
 
             var suggestion = string.Empty;
             var userInput = string.Empty;
+            var readLine = string.Empty;
 
             while (ConsoleKey.Enter != (input = Console.ReadKey()).Key)
             {
@@ -20,7 +21,7 @@ namespace HinterLib
                     userInput = userInput.Any() ? userInput.Remove(userInput.Length - 1, 1) : string.Empty;
 
                 else if (input.Key == ConsoleKey.Tab)
-                    userInput = suggestion;
+                    userInput = suggestion ?? userInput;
 
                 else if (input != null && Regex.IsMatch(input.KeyChar.ToString(), inputRegex))
                     userInput += input.KeyChar;
@@ -28,7 +29,7 @@ namespace HinterLib
                 suggestion = hintSource.Select(item => hintField(item).ToString())
                     .FirstOrDefault(item => item.Length > userInput.Length && item.Substring(0, userInput.Length) == userInput);
 
-                var inputText = suggestion == null ? userInput : suggestion;
+                readLine = suggestion == null ? userInput : suggestion;
 
                 ClearCurrentConsoleLine();
 
@@ -38,16 +39,14 @@ namespace HinterLib
 
                 Console.ForegroundColor = hintColor;
 
-                if (userInput.Any()) Console.Write(inputText.Substring(userInput.Length, inputText.Length - userInput.Length));
+                if (userInput.Any()) Console.Write(readLine.Substring(userInput.Length, readLine.Length - userInput.Length));
 
                 Console.ForegroundColor = originalColor;
             }
 
-            var result = suggestion == null ? userInput : suggestion;
+            Console.WriteLine(readLine);
 
-            Console.WriteLine(result);
-
-            return result;
+            return readLine;
         }
         
         private static void ClearCurrentConsoleLine()

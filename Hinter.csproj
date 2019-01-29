@@ -5,7 +5,7 @@
     <AssemblyTitle>hinter</AssemblyTitle>
     <VersionPrefix>1.0.4</VersionPrefix>
     <Authors>Fabio Junqueira</Authors>
-    <TargetFrameworks>netstandard1.3;net451</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>hinter</AssemblyName>
     <PackageId>hinter</PackageId>
     <PackageTags>console;hinting;hint;autocomplete;completion</PackageTags>
@@ -13,10 +13,4 @@
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
   </PropertyGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
 </Project>

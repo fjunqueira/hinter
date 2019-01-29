@@ -46,9 +46,9 @@ namespace HinterLib
 
             Console.WriteLine(readLine);
 
-            return readLine;
+            return userInput.Any() ? readLine : string.Empty;
         }
-        
+
         private static void ClearCurrentConsoleLine()
         {
             int currentLineCursor = Console.CursorTop;

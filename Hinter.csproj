@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Adds hinting capabilities to console applications</Description>
     <AssemblyTitle>hinter</AssemblyTitle>
-    <VersionPrefix>1.0.4</VersionPrefix>
+    <VersionPrefix>1.1.0</VersionPrefix>
     <Authors>Fabio Junqueira</Authors>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>hinter</AssemblyName>
